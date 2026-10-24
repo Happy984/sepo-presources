@@ -12,7 +12,6 @@ Description: A document library for PDFs, Word files, spreadsheets and slides, w
 * Uploaded documents are stored in uploads/sepo-resources/, blocked from direct access on Apache/LiteSpeed. For nginx, add the rule shown on the settings page.
 * Listing anywhere: [sepo_resources group="slug" tag="slug" ids="1,2" per_page="10" limit="-1" search="no" groups="no"]
 * REST API under /wp-json/sepo-resources/v1: GET /stats, POST /downloaded, POST /like, POST /reset.
-* Theme overrides: copy templates/archive.php, templates/single.php or templates/parts/*.php into your-theme/sepo-resources/.
 * Filter: sepo_resources_document ($doc array, WP_Post) adjusts what the views receive.
 * Activity log: every like, unlike and download is recorded with the country, browser and version, operating system, device type (computer, phone, tablet, TV, bot) and the user agent. See Resources → Activity (filters, breakdowns, CSV export) and the "Who liked and downloaded it" box on each document.
 * Bots, crawlers, link previews and scripts are recognised from the user agent. Their downloads are logged but not counted, unless "Count downloads by bots" is on.
