@@ -14,7 +14,6 @@ Description: A document library for PDFs, Word files, spreadsheets and slides, w
 * REST API under /wp-json/sepo-resources/v1: GET /stats, POST /downloaded, POST /like, POST /reset.
 * Filter: sepo_resources_document ($doc array, WP_Post) adjusts what the views receive.
 * Activity log: every like, unlike and download is recorded with the country, browser and version, operating system, device type (computer, phone, tablet, TV, bot) and the user agent. See Resources → Activity (filters, breakdowns, CSV export) and the "Who liked and downloaded it" box on each document.
-* Bots, crawlers, link previews and scripts are recognised from the user agent. Their downloads are logged but not counted, unless "Count downloads by bots" is on.
 * Filter: sepo_resources_country_lookup (null, $ip) — return a two-letter code to supply countries yourself, for example from a local MaxMind database. Action: sepo_resources_activity ($id, $kind, $visitor) after each logged event.
 
 ## Notes 
@@ -25,9 +24,8 @@ Description: A document library for PDFs, Word files, spreadsheets and slides, w
 * Page caching: the library and document pages show the visitor's own like state and a REST nonce. Exclude them from full-page caching for signed-in users (most cache plugins do this by default).
 * The library page loads every document and searches and pages in the browser. For libraries of several thousand documents, use the shortcode with group or tag filters.
 
-* New: Resources → Activity report with filters, breakdowns and CSV export; per-document activity box.
-* New: Visitor details settings (country source, lookup service, IP handling, bots, retention).
-* Changed: downloads by bots and scripts are no longer counted in totals (setting to restore).
-* New: personal data export and erase for the activity log; privacy policy text.
+* Resources → Activity report with filters, breakdowns and CSV export; per-document activity box.
+* Visitor details settings (country source, lookup service, IP handling, bots, retention).
+* personal data export and erase for the activity log; privacy policy text.
 
 * First release.1.0.0
