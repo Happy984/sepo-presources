@@ -26,11 +26,9 @@ Description: A document library for PDFs, Word files, spreadsheets and slides, w
 * Page caching: the library and document pages show the visitor's own like state and a REST nonce. Exclude them from full-page caching for signed-in users (most cache plugins do this by default).
 * The library page loads every document and searches and pages in the browser. For libraries of several thousand documents, use the shortcode with group or tag filters.
 
-
 * New: Resources → Activity report with filters, breakdowns and CSV export; per-document activity box.
 * New: Visitor details settings (country source, lookup service, IP handling, bots, retention).
 * Changed: downloads by bots and scripts are no longer counted in totals (setting to restore).
 * New: personal data export and erase for the activity log; privacy policy text.
 
-= 1.0.0 =
-* First release.
+* First release.1.0.0
