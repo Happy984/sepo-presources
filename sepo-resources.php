@@ -1,13 +1,14 @@
 <?php
+
 /**
  * Plugin Name:       Sepo Resources
- * Plugin URI:        https://sepodesk.com/
  * Description:       A document library for PDFs, Word files, spreadsheets and slides — search, groups, pagination, likes, download counts, gated downloads and PDF preview. Runs on WordPress alone.
- * Version:           1.1.0
+ * Version:           1.1.2
  * Requires at least: 6.0
  * Requires PHP:      8.1
  * Author:            Euneolink Solutions
  * Author URI:        https://sepodesk.com
+ * Plugin URI:        https://edu.sepodesk.com
  * License:           GPL-2.0-or-later
  * Text Domain:       sepo-resources
  * Domain Path:       /languages
@@ -28,7 +29,7 @@ if (version_compare(PHP_VERSION, '8.1', '<')) {
     return;
 }
 
-define('SPR_VERSION', '1.1.0');
+define('SPR_VERSION', '1.1.2');
 define('SPR_FILE', __FILE__);
 define('SPR_DIR', plugin_dir_path(__FILE__));
 define('SPR_URL', plugin_dir_url(__FILE__));

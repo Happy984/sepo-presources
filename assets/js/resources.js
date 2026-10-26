@@ -43,6 +43,53 @@
     });
   }
 
+  /** A message shown in the page, next to the control that failed. */
+  function say(near, message) {
+    var wrap = near.closest('.spr-wrap');
+    if (!wrap) return;
+    var box = wrap.querySelector('[data-spr-status]');
+    if (!box) {
+      box = document.createElement('p');
+      box.className = 'spr-status';
+      box.setAttribute('data-spr-status', '');
+      box.setAttribute('role', 'alert');
+      wrap.insertBefore(box, wrap.firstChild);
+    }
+    box.textContent = message;
+    clearTimeout(box._t);
+    box._t = setTimeout(function () { box.textContent = ''; }, 6000);
+  }
+
+  // ---- dark mode ----------------------------------------------------------
+  // Themes mark a dark page in different ways. A declared marker on <html> or
+  // <body> wins; otherwise the page background decides.
+  function isDark() {
+    var nodes = [document.documentElement, document.body];
+    var attrs = ['data-theme', 'data-bs-theme', 'data-color-scheme', 'data-mode', 'data-color-mode'];
+    for (var i = 0; i < nodes.length; i++) {
+      var n = nodes[i];
+      if (!n) continue;
+      for (var j = 0; j < attrs.length; j++) {
+        var v = (n.getAttribute(attrs[j]) || '').toLowerCase();
+        if (v === 'dark') return true;
+        if (v === 'light') return false;
+      }
+      if (/(^|\s)(dark|dark-mode|theme-dark|is-dark-theme|wp-dark-mode-active)(\s|$)/.test(n.className || '')) return true;
+    }
+    var bg = '';
+    nodes.forEach(function (n) {
+      if (!n) return;
+      var c = getComputedStyle(n).backgroundColor;
+      if (c && !/rgba\(\s*0,\s*0,\s*0,\s*0\s*\)|transparent/.test(c)) bg = c;
+    });
+    var m = bg.match(/rgba?\(\s*(\d+)[,\s]+(\d+)[,\s]+(\d+)/);
+    return !!m && (0.2126 * m[1] + 0.7152 * m[2] + 0.0722 * m[3]) / 255 < 0.4;
+  }
+  function paint() {
+    var dark = isDark();
+    Array.prototype.forEach.call(document.querySelectorAll('.spr-wrap'), function (w) { w.classList.toggle('is-dark', dark); });
+  }
+
   // ---- shared clicks (delegated once, document-wide) ----------------------
   document.addEventListener('click', function (ev) {
     var el = ev.target;
@@ -79,7 +126,7 @@
             if (typeof d.count === 'number') n.textContent = d.count;
           });
         })
-        .catch(function (err) { window.alert(err.message); })
+        .catch(function (err) { say(like, err.message); })
         .then(function () { like.classList.remove('is-busy'); });
       return;
     }
@@ -246,7 +293,16 @@
   }
 
   function boot() {
+    paint();
     Array.prototype.forEach.call(document.querySelectorAll('[data-spr-index]'), initIndex);
+    var mo = new MutationObserver(paint);
+    var opts = { attributes: true, attributeFilter: ['class', 'data-theme', 'data-bs-theme', 'data-color-scheme', 'data-mode', 'data-color-mode', 'style'] };
+    mo.observe(document.documentElement, opts);
+    if (document.body) mo.observe(document.body, opts);
+    if (window.matchMedia) {
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      if (mq.addEventListener) mq.addEventListener('change', function () { setTimeout(paint, 50); });
+    }
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);

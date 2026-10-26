@@ -104,10 +104,38 @@ final class Frontend
 
     // ------------------------------------------------------------- assets
 
+    /**
+     * The accent chosen in the settings, as custom properties. Left at the
+     * default, nothing is printed, so a theme with its own design tokens
+     * supplies the accent (and its dark-mode version) instead.
+     */
+    private static function accentCss(): string
+    {
+        $accent = (string) sanitize_hex_color((string) Settings::get('accent'));
+        if ($accent === '' || strtolower($accent) === '#0b3d33') {
+            return '';
+        }
+        $hex = ltrim($accent, '#');
+        if (strlen($hex) === 3) {
+            $hex = $hex[0] . $hex[0] . $hex[1] . $hex[1] . $hex[2] . $hex[2];
+        }
+        $lin = static function (int $c): float {
+            $c /= 255;
+            return $c <= 0.03928 ? $c / 12.92 : (($c + 0.055) / 1.055) ** 2.4;
+        };
+        $l = 0.2126 * $lin((int) hexdec(substr($hex, 0, 2))) + 0.7152 * $lin((int) hexdec(substr($hex, 2, 2))) + 0.0722 * $lin((int) hexdec(substr($hex, 4, 2)));
+        // Whichever of white or near-black text reads better on the accent.
+        $on = (1.05 / ($l + 0.05)) >= (($l + 0.05) / 0.0625) ? '#ffffff' : '#0b1512';
+        // On a dark page the accent is lifted towards white so it stays legible
+        // as text, with dark text on it when it is a button.
+        return ':root{--spr-accent-custom:' . $accent . ';--spr-on-accent-custom:' . $on . ';'
+            . '--spr-accent-custom-dark:color-mix(in srgb,' . $accent . ' 55%,#ffffff);--spr-on-accent-custom-dark:#0b1512;}';
+    }
+
     public static function registerAssets(): void
     {
         wp_register_style('sepo-resources', SPR_URL . 'assets/css/resources.css', [], SPR_VERSION);
-        wp_add_inline_style('sepo-resources', ':root{--spr-accent:' . esc_attr((string)Settings::get('accent')) . ';}');
+        wp_add_inline_style('sepo-resources', self::accentCss());
 
         wp_register_script('sepo-resources', SPR_URL . 'assets/js/resources.js', [], SPR_VERSION, true);
         wp_localize_script('sepo-resources', 'SepoResources', [
