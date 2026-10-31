@@ -79,7 +79,7 @@ A document library for WordPress. It holds PDFs, Word files, spreadsheets and sl
 3. Go to **Plugins** and activate **Sepo Resources**.
 
 > [!NOTE]
-> GitHub's **Code → Download ZIP** names the folder after the branch, for example `sepo-resources-main`. Rename it to `sepo-resources` before uploading.
+> GitHub's **Code → Download ZIP** names the folder after the branch, for example `sepo-presources-main`. Rename it to `sepo-resources` before uploading.
 
 ## Getting started
 
