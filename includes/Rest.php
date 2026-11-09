@@ -91,7 +91,7 @@ final class Rest
         try {
             $r = Download::count($post->ID);
         } catch (Throwable $e) {
-            error_log('[sepo-resources] download count failed: ' . $e->getMessage());
+            do_action('sepo_resources_error', 'download count', $e);
             return self::error(__('Could not record that download.', 'sepo-resources'), 500);
         }
         return self::ok(['counted' => $r['counted'], 'total' => $r['total'], 'yours' => $r['yours']]);
@@ -112,7 +112,7 @@ final class Rest
         } catch (InvalidArgumentException $e) {
             return self::error($e->getMessage(), 422);
         } catch (Throwable $e) {
-            error_log('[sepo-resources] like failed: ' . $e->getMessage());
+            do_action('sepo_resources_error', 'like', $e);
             return self::error(__('Could not record that like.', 'sepo-resources'), 500);
         }
         return self::ok(['doc' => $post->ID, 'liked' => $r['liked'], 'count' => $r['count']]);

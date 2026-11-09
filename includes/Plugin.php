@@ -11,8 +11,6 @@ final class Plugin
 {
     public static function boot(): void
     {
-        load_plugin_textdomain('sepo-resources', false, dirname(plugin_basename(SPR_FILE)) . '/languages');
-
         Activator::maybeUpgrade();
 
         PostType::init();

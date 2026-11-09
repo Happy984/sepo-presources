@@ -173,7 +173,7 @@ final class Columns
         if (!current_user_can('manage_categories')) {
             return;
         }
-        $raw = trim((string)($_POST['spr_order'] ?? ''));
+        $raw = trim(sanitize_text_field(wp_unslash((string)($_POST['spr_order'] ?? ''))));
         if ($raw === '' || !is_numeric($raw)) {
             delete_term_meta($termId, 'spr_order');
         } else {

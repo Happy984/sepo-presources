@@ -54,8 +54,8 @@ final class ActivityPage
         }
         // phpcs:disable WordPress.Security.NonceVerification -- read-only report filters
         $f = Activity::filters(wp_unslash($_GET));
-        $page = max(1, (int)($_GET['paged'] ?? 1));
-        // phpcs:enable
+        $page = max(1, isset($_GET['paged']) ? absint($_GET['paged']) : 1);
+        // phpcs:enable WordPress.Security.NonceVerification
 
         $totals = Activity::totals($f);
         $events = Activity::events($f, $page, self::PER_PAGE);
@@ -351,8 +351,8 @@ final class ActivityPage
         nocache_headers();
         header('Content-Type: text/csv; charset=utf-8');
         header('Content-Disposition: attachment; filename="resource-activity-' . wp_date('Y-m-d') . '.csv"');
-        $out = fopen('php://output', 'w');
-        fwrite($out, "\xEF\xBB\xBF"); // Excel reads UTF-8 with a BOM
+        echo "\xEF\xBB\xBF"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Excel reads UTF-8 with a BOM.
+        $out = fopen('php://output', 'w'); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- CSV stream to the browser.
         fputcsv($out, ['Date', 'Document ID', 'Document', 'Action', 'Counted', 'User ID', 'Name', 'Country code', 'Country', 'Browser', 'Browser version', 'System', 'Device', 'Bot', 'User agent', 'IP address']);
         $titles = [];
         foreach (Activity::each($f) as $r) {
@@ -377,7 +377,6 @@ final class ActivityPage
                 $r['ip'],
             ]));
         }
-        fclose($out);
         exit;
     }
 

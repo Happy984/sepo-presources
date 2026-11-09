@@ -101,7 +101,7 @@ final class Countries
         }
         $out = '';
         foreach (str_split($code) as $ch) {
-            $out .= mb_chr(0x1F1E6 + ord($ch) - 65, 'UTF-8');
+            $out .= html_entity_decode('&#' . (0x1F1E6 + ord($ch) - 65) . ';', ENT_QUOTES, 'UTF-8');
         }
         return $out;
     }

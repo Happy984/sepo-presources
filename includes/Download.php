@@ -116,7 +116,7 @@ final class Download
         $start = 0;
         $end = $size - 1;
         $partial = false;
-        $range = (string)($_SERVER['HTTP_RANGE'] ?? '');
+        $range = sanitize_text_field(wp_unslash((string)($_SERVER['HTTP_RANGE'] ?? '')));
         if ($range !== '' && preg_match('~^bytes=(\d*)-(\d*)$~', trim($range), $m) === 1) {
             $reqStart = $m[1] === '' ? null : (int)$m[1];
             $reqEnd = $m[2] === '' ? null : (int)$m[2];
@@ -136,7 +136,7 @@ final class Download
             $partial = true;
         }
 
-        $isHead = strtoupper((string)($_SERVER['REQUEST_METHOD'] ?? 'GET')) === 'HEAD';
+        $isHead = strtoupper(sanitize_key(wp_unslash((string)($_SERVER['REQUEST_METHOD'] ?? 'GET')))) === 'HEAD';
         if (!$partial && !$isHead) {
             $countIt();
         }
@@ -147,8 +147,9 @@ final class Download
         if (function_exists('apache_setenv')) {
             @apache_setenv('no-gzip', '1');
         }
-        @ini_set('zlib.output_compression', 'Off');
-        @set_time_limit(0);
+        // Large files are streamed in chunks: compression and the time limit would cut them short.
+        @ini_set('zlib.output_compression', 'Off'); // phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
+        @set_time_limit(0); // phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
 
         $filename = sanitize_file_name(basename($path));
         $length = $end - $start + 1;
@@ -168,22 +169,24 @@ final class Download
             exit;
         }
 
-        $fh = @fopen($path, 'rb');
+        // Read in 64 KB chunks from the requested byte offset, so large files and resumed downloads
+        // work without loading the whole file into memory. WP_Filesystem has no ranged read.
+        $fh = @fopen($path, 'rb'); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen
         if ($fh === false) {
             exit;
         }
         fseek($fh, $start);
         $remaining = $length;
         while ($remaining > 0 && !feof($fh) && !connection_aborted()) {
-            $chunk = fread($fh, min(65536, $remaining));
+            $chunk = fread($fh, min(65536, $remaining)); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fread
             if ($chunk === false || $chunk === '') {
                 break;
             }
-            echo $chunk; // phpcs:ignore WordPress.Security.EscapeOutput
+            echo $chunk; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- file download body.
             flush();
             $remaining -= strlen($chunk);
         }
-        fclose($fh);
+        fclose($fh); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose
         exit;
     }
 
@@ -220,7 +223,7 @@ final class Download
         $uid = get_current_user_id();
         $who = $uid > 0
             ? 'u' . $uid
-            : 'g' . md5((string)($_SERVER['REMOTE_ADDR'] ?? '') . '|' . (string)($_SERVER['HTTP_USER_AGENT'] ?? ''));
+            : 'g' . md5(sanitize_text_field(wp_unslash((string)($_SERVER['REMOTE_ADDR'] ?? ''))) . '|' . sanitize_text_field(wp_unslash((string)($_SERVER['HTTP_USER_AGENT'] ?? ''))));
         $key = 'spr_seen_' . md5($who . '|' . $postId);
         if (get_transient($key)) {
             return false;
@@ -241,6 +244,6 @@ final class Download
     {
         status_header($code);
         nocache_headers();
-        wp_die(esc_html($message), esc_html(get_bloginfo('name')), ['response' => $code, 'back_link' => true]);
+        wp_die(esc_html($message), esc_html(get_bloginfo('name')), ['response' => (int) $code, 'back_link' => true]);
     }
 }

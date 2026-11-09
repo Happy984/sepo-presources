@@ -1,6 +1,13 @@
 # Sepo Resources
 
+By [Euneolink Solutions](https://edu.sepodesk.com/) · Plugin page: [edu.sepodesk.com](https://edu.sepodesk.com/)
+
 A document library for WordPress. It holds PDFs, Word files, spreadsheets and slides, with search, groups, pages, likes, download counts, sign-in-only downloads and PDF preview.
+
+![Version](https://img.shields.io/badge/version-1.1.6-0b3d33)
+![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759b)
+![PHP](https://img.shields.io/badge/PHP-8.1%2B-777bb4)
+![License](https://img.shields.io/badge/license-GPL--2.0--or--later-blue)
 
 <p align="center">
   <a href="https://edu.sepodesk.com/sponsor/projects-maintenance/">
@@ -13,12 +20,6 @@ A document library for WordPress. It holds PDFs, Word files, spreadsheets and sl
   <br />
   <strong>Every contribution makes a difference. Thank you for supporting our work!</strong>
 </p>
-
-
-![Version](https://img.shields.io/badge/version-1.1.2-0b3d33)
-![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759b)
-![PHP](https://img.shields.io/badge/PHP-8.1%2B-777bb4)
-![License](https://img.shields.io/badge/license-GPL--2.0--or--later-blue)
 
 ## Contents
 
@@ -53,15 +54,16 @@ A document library for WordPress. It holds PDFs, Word files, spreadsheets and sl
   - the device type (computer, phone, tablet, TV or bot).
 
   See **Resources → Activity** for filters, breakdowns and CSV export. Each document also has a **Who liked and downloaded it** box.
+
 - **Bot detection.** Bots, crawlers, link previews and scripts are recognised. Their downloads are logged but not counted, unless you turn on **Count downloads by bots**.
 - **Theme colours and dark mode.** Colours follow your theme's design tokens when it has them, including its dark mode. Text keeps strong contrast on dark pages. An accent colour chosen in Settings overrides the theme's.
 
 ## Requirements
 
-| | Minimum |
-|---|---|
-| WordPress | 6.0 |
-| PHP | 8.1 |
+|           | Minimum |
+| --------- | ------- |
+| WordPress | 6.0     |
+| PHP       | 8.1     |
 
 ## Installation
 
@@ -99,15 +101,15 @@ You can show a list of documents on any page:
 [sepo_resources group="slug" tag="slug" ids="1,2" per_page="10" limit="-1" search="no" groups="no"]
 ```
 
-| Option | Meaning |
-|---|---|
-| `group` | Show only one group (its slug). |
-| `tag` | Show only one keyword (its slug). |
-| `ids` | Show only these documents. |
-| `per_page` | Documents per page. |
-| `limit` | Most documents to load; `-1` means all. |
-| `search` | `no` hides the search box. |
-| `groups` | `no` hides the group filter. |
+| Option     | Meaning                                 |
+| ---------- | --------------------------------------- |
+| `group`    | Show only one group (its slug).         |
+| `tag`      | Show only one keyword (its slug).       |
+| `ids`      | Show only these documents.              |
+| `per_page` | Documents per page.                     |
+| `limit`    | Most documents to load; `-1` means all. |
+| `search`   | `no` hides the search box.              |
+| `groups`   | `no` hides the group filter.            |
 
 ## Visitor details and privacy
 
@@ -157,16 +159,39 @@ The library page loads every document and does its search and pages in the brows
 
 ## Changelog
 
+### 1.1.6
+
+- The plugin is by Euneolink Solutions. Its plugin page and author page are edu.sepodesk.com.
+
+### 1.1.5
+
+- Readme: screenshots and their captions for the plugin directory.
+
+### 1.1.4
+
+- Admin screens: settings shown as cards, lists in a rounded frame, rounded fields and buttons, pill-shaped tabs and filters, and notices on tinted backgrounds.
+
+### 1.1.3
+
+- Errors are passed to the sepo_resources_error action instead of the PHP error log.
+- Added the languages folder and the Tested up to header.
+- Country flags are built without mb_chr(), for older hosts.
+- Passes the WordPress Plugin Check: translator comments on every string with placeholders, escaped output, sanitised request data and documented database access to the plugin's own tables.
+- Tested up to WordPress 7.1.
+
 ### 1.1.2
+
 - In dark mode, body and secondary text use light colours with strong contrast (about 14:1 and 10:1). Dates, summaries, labels and counts read as clearly as the headings.
 
 ### 1.1.1
+
 - Colours follow the theme's design tokens when it has them, including its dark mode. An accent chosen in Settings still overrides the theme's.
 - On dark pages, primary buttons use the theme's dark-mode button colours, or a lighter version of a custom accent with dark text.
 - Secondary text uses a muted colour with readable contrast in light and dark mode.
 - A failed like shows a message in the page.
 
 ### 1.1.0
+
 - Activity log with country, browser, system and device for every like, unlike and download.
 - **Resources → Activity** report with filters, breakdowns and CSV export, and an activity box on each document.
 - Visitor details settings: country source, lookup service, IP handling, bots and retention.
@@ -174,6 +199,7 @@ The library page loads every document and does its search and pages in the brows
 - Personal data export and erase for the activity log, and privacy policy text.
 
 ### 1.0.0
+
 - First release.
 
 ## License
