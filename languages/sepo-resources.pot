@@ -1,0 +1,1142 @@
+# Copyright (C) 2026 Euneolink Solutions
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Sepo Resources 1.1.6\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sepo-resources\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-08T13:04:54+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: sepo-resources\n"
+
+#. Plugin Name of the plugin
+#: sepo-resources.php
+#: includes/Privacy.php:88
+msgid "Sepo Resources"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: sepo-resources.php
+msgid "https://edu.sepodesk.com/"
+msgstr ""
+
+#. Description of the plugin
+#: sepo-resources.php
+msgid "A document library for PDFs, Word files, spreadsheets and slides — search, groups, pagination, likes, download counts, gated downloads and PDF preview. Runs on WordPress alone."
+msgstr ""
+
+#. Author of the plugin
+#: sepo-resources.php
+msgid "Euneolink Solutions"
+msgstr ""
+
+#: includes/Activity.php:520
+#: includes/Helpers.php:146
+msgid "Download"
+msgstr ""
+
+#: includes/Activity.php:521
+msgid "Like"
+msgstr ""
+
+#: includes/Activity.php:522
+msgid "Unlike"
+msgstr ""
+
+#: includes/Activity.php:532
+#: includes/Admin/ActivityPage.php:197
+#: includes/Admin/ActivityPage.php:259
+#: includes/Admin/ActivityPage.php:334
+#: includes/Countries.php:91
+#: includes/Visitor.php:326
+msgid "Unknown"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:42
+msgid "Resource activity"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:43
+#: includes/Admin/ActivityPage.php:65
+msgid "Activity"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:53
+msgid "You are not allowed to view this page."
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:66
+msgid "Export CSV"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:71
+msgid "Activity logging is off, so nothing new is being recorded."
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:72
+msgid "Turn it on in Settings"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:81
+#: includes/Admin/ActivityPage.php:186
+#: includes/Admin/Columns.php:58
+#: includes/Admin/MetaBoxes.php:188
+#: includes/Admin/SettingsPage.php:121
+#: includes/Helpers.php:162
+#: templates/parts/single.php:124
+msgid "Downloads"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:82
+#: includes/Admin/ActivityPage.php:186
+#: includes/Admin/Columns.php:59
+#: includes/Admin/MetaBoxes.php:190
+#: templates/parts/single.php:125
+msgid "Likes"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:83
+#: includes/Admin/ActivityPage.php:186
+msgid "Unlikes"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:84
+#: includes/Admin/ActivityPage.php:96
+#: includes/Admin/MetaBoxes.php:234
+msgid "Countries"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:85
+msgid "Signed-in people"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:86
+msgid "Bot hits (not counted)"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:97
+#: includes/Admin/MetaBoxes.php:235
+msgid "Browsers"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:98
+#: includes/Admin/MetaBoxes.php:236
+msgid "Systems"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:99
+#: includes/Admin/MetaBoxes.php:237
+msgid "Devices"
+msgstr ""
+
+#. translators: %s: number of events
+#: includes/Admin/ActivityPage.php:107
+msgid "%s event"
+msgid_plural "%s events"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: days
+#: includes/Admin/ActivityPage.php:132
+msgid "Events are kept for %d day."
+msgid_plural "Events are kept for %d days."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: days
+#: includes/Admin/ActivityPage.php:133
+msgid "Events are kept until you delete them."
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:135
+msgid "Times are in the site’s time zone."
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:137
+msgid "Visitor settings"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:175
+#: includes/Admin/ActivityPage.php:290
+#: includes/Admin/ActivityPage.php:306
+#: includes/Admin/MetaBoxes.php:56
+#: includes/Privacy.php:57
+msgid "Document"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:177
+#: includes/PostType.php:70
+msgid "All documents"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:183
+#: includes/Admin/ActivityPage.php:291
+#: includes/Admin/ActivityPage.php:308
+#: includes/Privacy.php:58
+msgid "Action"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:185
+#: templates/parts/index.php:42
+msgid "All"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:191
+#: includes/Admin/ActivityPage.php:293
+#: includes/Admin/ActivityPage.php:327
+#: includes/Privacy.php:60
+msgid "Country"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:193
+msgid "All countries"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:200
+#: includes/Admin/ActivityPage.php:294
+#: includes/Admin/ActivityPage.php:328
+#: includes/Privacy.php:61
+msgid "Browser"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:202
+msgid "All browsers"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:208
+#: includes/Admin/ActivityPage.php:296
+#: includes/Admin/ActivityPage.php:335
+#: includes/Privacy.php:63
+msgid "Device"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:210
+msgid "All devices"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:216
+msgid "People"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:218
+msgid "Everyone"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:219
+msgid "Signed in"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:220
+msgid "Signed out"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:223
+msgid "Bots"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:225
+msgid "Hide bots"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:226
+msgid "Include bots"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:227
+msgid "Bots only"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:230
+msgid "From"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:231
+msgid "To"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:233
+msgid "Filter"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:234
+msgid "Clear"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:250
+msgid "Nothing yet."
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:283
+msgid "No likes or downloads match."
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:289
+#: includes/Admin/ActivityPage.php:304
+msgid "When"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:292
+#: includes/Admin/ActivityPage.php:312
+msgid "Person"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:295
+#: includes/Admin/ActivityPage.php:334
+#: includes/Privacy.php:62
+msgid "System"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:310
+msgid "not counted"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:320
+msgid "Signed-out visitor"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:331
+msgid "Agent"
+msgstr ""
+
+#: includes/Admin/ActivityPage.php:346
+msgid "You are not allowed to export activity."
+msgstr ""
+
+#: includes/Admin/Columns.php:36
+msgid "Order"
+msgstr ""
+
+#: includes/Admin/Columns.php:54
+#: includes/Admin/MetaBoxes.php:120
+#: templates/parts/single.php:73
+msgid "Format"
+msgstr ""
+
+#: includes/Admin/Columns.php:71
+#: includes/Admin/MetaBoxes.php:49
+#: includes/Admin/MetaBoxes.php:105
+msgid "No file attached"
+msgstr ""
+
+#: includes/Admin/Columns.php:78
+msgid "Sign-in required"
+msgstr ""
+
+#: includes/Admin/Columns.php:133
+msgid "Reset likes and downloads for this document? This can’t be undone."
+msgstr ""
+
+#: includes/Admin/Columns.php:134
+msgid "Reset counts"
+msgstr ""
+
+#: includes/Admin/Columns.php:146
+#: includes/Admin/Columns.php:158
+msgid "Display order"
+msgstr ""
+
+#: includes/Admin/Columns.php:148
+#: includes/Admin/Columns.php:162
+msgid "Lower numbers show first on the library page. Groups without a number follow, A to Z."
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:31
+msgid "Document title"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:46
+msgid "Choose a document"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:47
+msgid "Choose a photo"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:48
+msgid "Use this file"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:57
+msgid "Author"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:58
+msgid "Download rules"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:60
+msgid "Engagement"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:62
+msgid "Who liked and downloaded it"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:68
+msgid "Summary"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:106
+msgid "Upload or choose file"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:107
+#: includes/Admin/MetaBoxes.php:145
+msgid "Remove"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:112
+msgid "Documents uploaded here are stored in a protected folder and only reach visitors through the download link."
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:113
+msgid "Documents uploaded here go to the normal uploads folder."
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:116
+msgid "Or link to a file hosted elsewhere"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:121
+#: templates/parts/single.php:126
+msgid "Size"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:122
+#: templates/parts/single.php:74
+#: templates/parts/single.php:127
+msgid "Pages"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:123
+#: templates/parts/single.php:75
+#: templates/parts/single.php:128
+msgid "Version"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:124
+#: templates/parts/single.php:76
+msgid "Published"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:125
+#: templates/parts/single.php:77
+msgid "Last updated"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:126
+#: templates/parts/single.php:78
+msgid "Language"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:127
+#: templates/parts/single.php:79
+msgid "Licence"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:128
+msgid "Reference, DOI or ISBN"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:131
+msgid "Leave format and size empty to read them from the file. Leave Published empty to use the post date."
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:144
+msgid "Choose photo"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:149
+msgid "Name"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:150
+msgid "Role"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:151
+msgid "Organisation"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:152
+msgid "Profile link"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:169
+#: includes/Admin/SettingsPage.php:127
+msgid "Allow download"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:170
+#: includes/Admin/SettingsPage.php:129
+msgid "Sign-in required to download"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:172
+msgid "PDF preview"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:174
+msgid "Automatic (PDFs only)"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:175
+msgid "Show"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:176
+msgid "Hide"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:179
+msgid "Use Page attributes → Order to fix a document’s place within its group."
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:189
+msgid "People who downloaded"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:195
+msgid "Recent downloads"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:198
+msgid "Signed-out visitors"
+msgstr ""
+
+#. translators: %d: count
+#: includes/Admin/MetaBoxes.php:203
+msgid "%d time"
+msgid_plural "%d times"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: count
+#: includes/Admin/MetaBoxes.php:204
+msgid "ago"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:212
+msgid "Reset downloads"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:212
+msgid "Reset likes"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:212
+msgid "Reset both"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:216
+msgid "This can’t be undone. Continue?"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:230
+msgid "No likes or downloads recorded yet. Each one will show the country, browser, system and device here."
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:239
+msgid "Latest"
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:245
+msgid "See all activity for this document"
+msgstr ""
+
+#. translators: %s: number
+#: includes/Admin/MetaBoxes.php:250
+msgid "%s bot hit not shown or counted."
+msgid_plural "%s bot hits not shown or counted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Admin/MetaBoxes.php:269
+msgid "You don’t have permission to reset these counts."
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:292
+msgid "Counts reset."
+msgstr ""
+
+#: includes/Admin/MetaBoxes.php:292
+msgid "There was nothing to reset."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:27
+#: includes/Admin/SettingsPage.php:42
+msgid "Settings"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:41
+#: includes/Admin/SettingsPage.php:86
+msgid "Resources settings"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:90
+msgid "Library page"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:93
+msgid "Address"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:96
+msgid "The library lives here and each document lives under it. Downloads use …/download/{id}/."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:100
+msgid "Heading"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:104
+msgid "Introduction"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:108
+msgid "Documents per page"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:112
+msgid "Label for ungrouped documents"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:116
+msgid "Accent colour"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:124
+msgid "New documents"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:130
+msgid "Each document can override these in its Download rules box."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:134
+msgid "Count repeat downloads after"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:136
+msgid "seconds"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:137
+msgid "Stops double-clicks and download managers from inflating the count. 0 counts every request."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:141
+msgid "File protection"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:144
+msgid "Store uploaded documents in a protected folder"
+msgstr ""
+
+#. translators: %s: folder path
+#: includes/Admin/SettingsPage.php:149
+msgid "Files go to %s, which blocks direct access on Apache and LiteSpeed. On nginx, add this rule to your server block:"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:159
+msgid "Visitor details"
+msgstr ""
+
+#. translators: %s: link to the Activity page
+#: includes/Admin/SettingsPage.php:163
+msgid "Each like, unlike and download is logged with the country, browser, system and device. See them in %s and on each document’s edit screen."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:164
+msgid "Resources → Activity"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:169
+msgid "Activity log"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:172
+msgid "Record country, browser and device for likes and downloads"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:174
+msgid "Keep the full user-agent text as well"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:178
+msgid "Country from your host"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:181
+msgid "Use the country sent by the CDN or host"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:182
+msgid "Cloudflare (CF-IPCountry), Amazon CloudFront, Vercel, Google App Engine and servers with a GeoIP module send it with every request. Free, instant, and no IP address is stored."
+msgstr ""
+
+#. translators: %s: country
+#: includes/Admin/SettingsPage.php:186
+msgid "Working: your host says you are in %s."
+msgstr ""
+
+#. translators: %s: country
+#: includes/Admin/SettingsPage.php:187
+msgid "Your host is not sending a country right now. Use a lookup service below, or turn on Cloudflare’s “IP Geolocation”."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:192
+msgid "Country lookup service"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:195
+msgid "None"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:196
+msgid "free, no key"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:197
+msgid "free up to 1,000 a day"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:198
+msgid "free with a token"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:200
+msgid "Token (ipinfo.io)"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:201
+msgid "Used only when the host sends no country. The visitor’s IP address is sent to the service in the background a minute later, never while they wait, and each address is asked once a month at most."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:205
+msgid "Visitor IP comes from"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:208
+msgid "The connection (REMOTE_ADDR) — recommended"
+msgstr ""
+
+#. translators: %s: IP address
+#: includes/Admin/SettingsPage.php:217
+msgid "Pick a header only if your site really sits behind that proxy; visitors can fake it otherwise. Your address as seen now: %s"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:224
+msgid "IP addresses"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:227
+msgid "Keep IP addresses in the log"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:228
+msgid "Off: an address is kept only until its country is found, then deleted. IP addresses are personal data in many countries."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:232
+msgid "Bots and crawlers"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:235
+msgid "Count downloads by bots in the totals"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:236
+msgid "Off: Googlebot, link previews, scripts and other crawlers are logged but left out of download counts."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:240
+msgid "Keep the log for"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:242
+msgid "days"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:243
+msgid "Older events are deleted daily. 0 keeps them forever. Totals on the library are not affected."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:248
+msgid "Uninstall"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:251
+msgid "When the plugin is deleted"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:254
+msgid "Delete likes, download counts, the activity log and settings"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:255
+msgid "Documents and their files are never deleted."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:263
+msgid "Showing documents elsewhere"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:264
+msgid "Put a listing on any page or post with the shortcode:"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:266
+msgid "Attributes: group, tag (slugs, comma-separated), ids, per_page, limit, search=\"no\", groups=\"no\"."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:268
+msgid "Library page:"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:270
+msgid "Example download link:"
+msgstr ""
+
+#: includes/Download.php:61
+#: includes/Download.php:64
+#: includes/Rest.php:69
+#: includes/Rest.php:79
+#: includes/Rest.php:107
+#: includes/Rest.php:125
+msgid "Document not found."
+msgstr ""
+
+#: includes/Download.php:67
+msgid "This document is password protected."
+msgstr ""
+
+#: includes/Download.php:74
+msgid "Downloads are turned off for this document."
+msgstr ""
+
+#: includes/Download.php:81
+msgid "This document has no file attached."
+msgstr ""
+
+#: includes/Download.php:101
+msgid "The file could not be found."
+msgstr ""
+
+#: includes/EventStore.php:221
+msgid "You must be signed in to like a document."
+msgstr ""
+
+#: includes/EventStore.php:308
+msgid "Unknown reset target."
+msgstr ""
+
+#: includes/Frontend.php:146
+#: includes/Helpers.php:128
+msgid "Like this document"
+msgstr ""
+
+#: includes/Frontend.php:147
+#: includes/Helpers.php:128
+msgid "Remove your like"
+msgstr ""
+
+#: includes/Frontend.php:148
+msgid "Copied"
+msgstr ""
+
+#. translators: %1$s: value, %2$s: value, %3$s: value.
+#: includes/Frontend.php:150
+msgid "Showing %1$s–%2$s of %3$s documents"
+msgstr ""
+
+#: includes/Frontend.php:151
+msgid "1 document"
+msgstr ""
+
+#. translators: %s: value.
+#: includes/Frontend.php:153
+msgid "%s documents"
+msgstr ""
+
+#: includes/Frontend.php:154
+msgid "Previous page"
+msgstr ""
+
+#: includes/Frontend.php:155
+msgid "Next page"
+msgstr ""
+
+#: includes/Frontend.php:156
+msgid "That didn’t work. Try again."
+msgstr ""
+
+#. translators: %s: version number
+#: includes/Frontend.php:325
+msgid "Version %s."
+msgstr ""
+
+#. translators: %s: number of pages
+#: includes/Helpers.php:107
+msgid "%s page"
+msgid_plural "%s pages"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Helpers.php:122
+msgid "Sign in to save this document"
+msgstr ""
+
+#: includes/Helpers.php:138
+msgid "Not available"
+msgstr ""
+
+#: includes/Helpers.php:142
+msgid "Sign in to download"
+msgstr ""
+
+#. translators: %s: file format, e.g. PDF
+#: includes/Helpers.php:148
+msgid "Download %s"
+msgstr ""
+
+#. translators: %d: number of downloads
+#: includes/Helpers.php:151
+msgid "%d download"
+msgid_plural "%d downloads"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/PostType.php:60
+#: includes/PostType.php:71
+#: includes/Settings.php:25
+msgid "Resources"
+msgstr ""
+
+#: includes/PostType.php:61
+msgid "Resource"
+msgstr ""
+
+#: includes/PostType.php:62
+#: includes/PostType.php:63
+msgid "Add document"
+msgstr ""
+
+#: includes/PostType.php:64
+msgid "Edit document"
+msgstr ""
+
+#: includes/PostType.php:65
+msgid "New document"
+msgstr ""
+
+#: includes/PostType.php:66
+msgid "View document"
+msgstr ""
+
+#: includes/PostType.php:67
+#: templates/parts/index.php:35
+msgid "Search documents"
+msgstr ""
+
+#: includes/PostType.php:68
+msgid "No documents yet."
+msgstr ""
+
+#: includes/PostType.php:69
+msgid "No documents in the trash."
+msgstr ""
+
+#: includes/PostType.php:86
+#: includes/PostType.php:92
+msgid "Groups"
+msgstr ""
+
+#: includes/PostType.php:87
+msgid "Group"
+msgstr ""
+
+#: includes/PostType.php:88
+msgid "Add group"
+msgstr ""
+
+#: includes/PostType.php:89
+msgid "Edit group"
+msgstr ""
+
+#: includes/PostType.php:90
+msgid "Search groups"
+msgstr ""
+
+#: includes/PostType.php:91
+msgid "All groups"
+msgstr ""
+
+#: includes/PostType.php:103
+#: includes/PostType.php:107
+#: templates/parts/single.php:82
+msgid "Keywords"
+msgstr ""
+
+#: includes/PostType.php:104
+msgid "Keyword"
+msgstr ""
+
+#: includes/PostType.php:105
+msgid "Add keyword"
+msgstr ""
+
+#: includes/PostType.php:106
+msgid "Search keywords"
+msgstr ""
+
+#: includes/Privacy.php:26
+#: includes/Privacy.php:36
+msgid "Sepo Resources activity"
+msgstr ""
+
+#: includes/Privacy.php:54
+msgid "Document likes and downloads"
+msgstr ""
+
+#: includes/Privacy.php:59
+msgid "Date (UTC)"
+msgstr ""
+
+#: includes/Privacy.php:64
+msgid "User agent"
+msgstr ""
+
+#: includes/Privacy.php:65
+msgid "IP address"
+msgstr ""
+
+#: includes/Privacy.php:85
+msgid "When you download or like a document in our library, we record which document, when, the country you were in, and the browser, operating system and type of device you used (read from your browser’s user-agent string). If you are signed in, we also record your account."
+msgstr ""
+
+#: includes/Privacy.php:86
+msgid "To find the country, we may use the country our hosting or network provider sends with your request, or look up your IP address with an IP location service. Your IP address is deleted once the country is known, unless the site keeps it for security."
+msgstr ""
+
+#: includes/Privacy.php:87
+msgid "These records are deleted automatically after the retention period set by the site owner."
+msgstr ""
+
+#: includes/Rest.php:95
+msgid "Could not record that download."
+msgstr ""
+
+#: includes/Rest.php:103
+msgid "Sign in to like this document."
+msgstr ""
+
+#: includes/Rest.php:116
+msgid "Could not record that like."
+msgstr ""
+
+#: includes/Settings.php:28
+msgid "Other documents"
+msgstr ""
+
+#: includes/Visitor.php:123
+msgid "No user agent"
+msgstr ""
+
+#: includes/Visitor.php:171
+msgid "Other"
+msgstr ""
+
+#: includes/Visitor.php:240
+msgid "Other bot"
+msgstr ""
+
+#: includes/Visitor.php:321
+msgid "Phone"
+msgstr ""
+
+#: includes/Visitor.php:322
+msgid "Tablet"
+msgstr ""
+
+#: includes/Visitor.php:323
+msgid "TV"
+msgstr ""
+
+#: includes/Visitor.php:324
+msgid "Bot"
+msgstr ""
+
+#: includes/Visitor.php:325
+msgid "Computer"
+msgstr ""
+
+#: sepo-resources.php:25
+msgid "Sepo Resources needs PHP 8.1 or newer. The plugin is installed but not running."
+msgstr ""
+
+#: templates/parts/index.php:29
+msgid "No documents published yet."
+msgstr ""
+
+#: templates/parts/index.php:36
+msgid "Search by title, author, keyword…"
+msgstr ""
+
+#. translators: %d: number of documents
+#: templates/parts/index.php:59
+msgid "%d document"
+msgid_plural "%d documents"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/parts/index.php:121
+msgid "No documents match that search."
+msgstr ""
+
+#: templates/parts/index.php:122
+msgid "Document pages"
+msgstr ""
+
+#: templates/parts/single.php:67
+msgid "Preview"
+msgstr ""
+
+#. translators: %s: document title
+#: templates/parts/single.php:68
+msgid "%s preview"
+msgstr ""
+
+#: templates/parts/single.php:71
+msgid "Document details"
+msgstr ""
+
+#: templates/parts/single.php:80
+msgid "Reference"
+msgstr ""
+
+#: templates/parts/single.php:88
+msgid "Cite this document"
+msgstr ""
+
+#: templates/parts/single.php:90
+msgid "Copy"
+msgstr ""
+
+#: templates/parts/single.php:97
+msgid "Related documents"
+msgstr ""
+
+#: templates/parts/single.php:129
+msgid "Updated"
+msgstr ""
+
+#: templates/parts/single.php:133
+msgid "This document is available to signed-in members."
+msgstr ""
