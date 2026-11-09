@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+// phpcs:disable WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_post__not_in -- Queries are bounded by indexes and limits.
 
 namespace SepoResources;
 
@@ -145,8 +146,10 @@ final class Frontend
                 'like'      => __('Like this document', 'sepo-resources'),
                 'unlike'    => __('Remove your like', 'sepo-resources'),
                 'copied'    => __('Copied', 'sepo-resources'),
+                /* translators: %1$s: value, %2$s: value, %3$s: value. */
                 'showing'   => __('Showing %1$s–%2$s of %3$s documents', 'sepo-resources'),
                 'one'       => __('1 document', 'sepo-resources'),
+                /* translators: %s: value. */
                 'many'      => __('%s documents', 'sepo-resources'),
                 'prev'      => __('Previous page', 'sepo-resources'),
                 'next'      => __('Next page', 'sepo-resources'),
@@ -335,7 +338,7 @@ final class Frontend
             'previewUrl' => $previewUrl,
             'cite'       => $cite,
             'related'    => self::related($post, $doc),
-            'body'       => apply_filters('the_content', $post->post_content),
+            'body'       => apply_filters('the_content', $post->post_content), // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- core content filter.
         ];
         return self::part('single.php', $vars);
     }
